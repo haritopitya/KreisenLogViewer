@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="300" height="60" viewBox="0 0 79.374998 15.875" version="1.1" id="svg8" inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)" sodipodi:docname="plane.svg" >
+   <defs id="defs2" />
+   <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="2" inkscape:cx="119.86861" inkscape:cy="-17.17971" inkscape:document-units="px" inkscape:current-layer="layer1" inkscape:document-rotation="0" showgrid="false" units="px" inkscape:pagecheckerboard="true" inkscape:showpageshadow="false" showguides="true" inkscape:guide-bbox="true" inkscape:window-width="1639" inkscape:window-height="1041" inkscape:window-x="772" inkscape:window-y="29" inkscape:window-maximized="0">
+      <sodipodi:guide position="-15.875,7.9374999" orientation="0,1" id="guide833" inkscape:label="" inkscape:locked="false" inkscape:color="rgb(0,0,255)" />
+      <sodipodi:guide position="-17.418513,66.059684" orientation="0.70710678,-0.70710678" id="guide837" />
+      <sodipodi:guide position="39.6875,38.466037" orientation="-1,0" id="guide839" inkscape:label="" inkscape:locked="false" inkscape:color="rgb(0,0,255)" />
+   </sodipodi:namedview>
+   <metadata id="metadata5">
+      <rdf:RDF>
+         <cc:Work rdf:about="">
+            <dc:format>image/svg+xml</dc:format>
+            <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+            <dc:title></dc:title>
+         </cc:Work>
+      </rdf:RDF>
+   </metadata>
+   <g inkscape:label="レイヤー 1" inkscape:groupmode="layer" id="layer1">
+      <rect style="fill:#ffff00;stroke:#ffff00;stroke-width:0.0859116" id="rect835" width="21.080755" height="0.97242177" x="0.042955756" y="7.4512887" inkscape:tile-cx="10.654373" inkscape:tile-cy="7.9374997" inkscape:tile-w="21.308747" inkscape:tile-h="1.0583333" inkscape:tile-x0="-3.3527612e-08" inkscape:tile-y0="7.408333" />
+      <path style="fill:#ffff00;fill-opacity:1;stroke:none;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="M 39.6875,7.9374999 25.936006,15.876929 39.6875,12.192227 v -4.2547271 0" id="path867" inkscape:tile-cx="32.811753" inkscape:tile-cy="11.907214" inkscape:tile-w="13.751494" inkscape:tile-h="7.939429" inkscape:tile-x0="25.936006" inkscape:tile-y0="7.9374998" />
+      <use x="0" y="0" inkscape:tiled-clone-of="#rect835" xlink:href="#rect835" transform="matrix(-1,0,0,1,79.374999,1.5824794e-7)" id="use871" width="100%" height="100%" />
+      <use x="0" y="0" inkscape:tiled-clone-of="#path867" xlink:href="#path867" id="use873" />
+      <use x="0" y="0" inkscape:tiled-clone-of="#path867" xlink:href="#path867" transform="matrix(-1,0,0,1,79.374999,0)" id="use875" />
+   </g>
+</svg>
