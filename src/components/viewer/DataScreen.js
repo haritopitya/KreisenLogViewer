@@ -30,21 +30,21 @@ const DataScreen = ({ currentData }) => {
             >
                 <Tab eventKey='summary' title='Summary'>
                     <Container fluid>
-                        <Row xs={1} md={2}>
+                        <Row xs={1} xxl={2} >
                             {summary.map((val, key) => (<Datacard data={val} key={key} />))}
                         </Row>
                     </Container>
                 </Tab>
                 <Tab eventKey='all' title='All'>
                     <Container fluid>
-                        <Row xs={1} md={2}>
+                        <Row xs={1} xxl={2}>
                             {currentData && Object.keys(currentData).map((key) => (<Datacard data={currentData[key]} key={key} />))}
                         </Row>
                     </Container>
                 </Tab>
                 <Tab eventKey='battery' title='Battery'>
                     <Container fluid>
-                        <Row xs={1} md={2}>
+                        <Row xs={1} xxl={2}>
                             {currentData && Object.keys(currentData).map((key) => (currentData[key].isBattery && <Datacard data={currentData[key]} key={key} />))}
                         </Row>
                     </Container>
