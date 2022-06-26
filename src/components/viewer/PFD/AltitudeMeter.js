@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 import React from 'react';
 
-const AltitudeMeter= ({ altitude }) => {
+const AltitudeMeter = ({ altitude }) => {
    const styles = {
       wrap: css({
          display: 'flex',
@@ -19,7 +19,7 @@ const AltitudeMeter= ({ altitude }) => {
          width: '100%',
          justifyContent: 'flex-end',
          paddingLeft: 0,
-         transform: `translateY(${(1 + altitude)*100/18}%)`,
+         transform: `translateY(${(1 + parseFloat(altitude))*100/18}%)`,
       }),
       img: css({
          height: '100%',
