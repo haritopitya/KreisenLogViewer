@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Chart from 'react-apexcharts';
 
 
-const Graph = React.memo(({ log }) => {
+const Graph = ({ log, currentData }) => {
     const [startTime, setStartTiem] = useState(log[log.length - 1] && log[log.length - 1].timestamp.rawValue + 9 * 60 * 60 * 1000);
     const [endTime, setEndTiem] = useState(log[0] && log[0].timestamp.rawValue + 9 * 60 * 60 * 1000);
     useEffect(() => {
@@ -45,7 +45,75 @@ const Graph = React.memo(({ log }) => {
         },
     ]
 
-    
+    const options = {
+        chart: {
+            id: "mainChart",
+            zoom: {
+                enabled: true,
+            },
+            animations: {
+                enabled: false
+            },
+            toolbar: {
+                show: false,
+            },
+        },
+        tooltip: {
+            x: {
+                format: 'yyyy/MM/dd HH:mm:ss',
+            },
+        },
+        stroke: {
+            curve: 'smooth'
+        },
+        xaxis: {
+            type: 'datetime',
+        },
+        yaxis: [
+            {
+                show: false,
+                seriesName: '対気速'
+            },
+            {
+                labels: {
+                    formatter: val => val && val.toFixed(2)
+                },
+                title: { text: '高度m / 対気速m/s' },
+                seriesName: '対気速'
+            },
+            {
+                labels: {
+                    formatter: val => val && val
+                },
+                title: { text: '出力W / 回転数rpm' },
+                seriesName: '出力',
+                opposite: true
+            },
+            {
+                seriesName: '出力',
+                show: false,
+            }
+        ],
+        theme: {
+            mode: 'dark',
+        },
+        legend: {
+            position: 'top'
+        },
+        annotations: {
+            points: [
+                {
+                    x: currentData && currentData['timestamp'].rawValue+9*60*60*1000,
+                    yAxisIndex:3,
+                    seriesIndex: 3,
+                    marker: {
+                        sizez: 8
+                    }
+                }
+            ]
+        }
+    }
+
     const options2 = {
         chart: {
             zoom: {
@@ -102,67 +170,12 @@ const Graph = React.memo(({ log }) => {
     }
     return (
         <div css={css({ height: '50%', width: '100%' })} >
-            <Chart type='line' options={options} series={data} height='80%' />
-            <Chart type='line' options={options2} series={data} height='20%' />
+            <Chart type='line' options={options} series={data} height='100%' />
+            {/* <Chart type='line' options={options2} series={data} height='20%' /> */}
         </div>
     )
-})
-
-const options = {
-    chart: {
-        id: "mainChart",
-        zoom: {
-            enabled: true,
-        },
-        animations: {
-            enabled:false
-        },
-        toolbar: {
-            show: false,
-        },
-    },
-    tooltip: {
-        x: {
-            format: 'yyyy/MM/dd HH:mm:ss',
-        },
-    },
-    stroke: {
-        curve:'smooth'
-    },
-    xaxis: {
-        type: 'datetime',
-    },
-    yaxis: [
-        {
-            show: false,
-            seriesName: '対気速'
-        },
-        {
-            labels: {
-                formatter: val => val && val.toFixed(2)
-            },
-            title: { text: '高度m / 対気速m/s' },
-            seriesName: '対気速'
-        },
-        {
-            labels: {
-                formatter: val => val && val
-            },
-            title: { text: '出力W / 回転数rpm' },
-            seriesName: '出力',
-            opposite: true
-        },
-        {
-            seriesName: '出力',
-            show: false,
-        }
-    ],
-    theme: {
-        mode: 'dark',
-    },
-    legend: {
-        position:'top'
-    }
 }
+
+
 
 export default Graph

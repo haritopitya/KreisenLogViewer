@@ -32,7 +32,6 @@ const ViewerView = () => {
         let prevSnapshot = logData[0]
         const currentUnixtime = Math.floor(strToUnixtime(startedAt) - delay + seconds * 1000)
         for (const snapshot of logData) {
-            console.log(currentUnixtime,snapshot.timestamp.rawValue);
             if (snapshot.timestamp.rawValue > currentUnixtime) break
             prevSnapshot=snapshot
         }
@@ -42,7 +41,7 @@ const ViewerView = () => {
         <div css={styles.wrap}>
             <div css={styles.inner}>
                 <PFD currentData={currentLogData} />
-                <Graph log={logData} />
+                <Graph log={logData} currentData={currentLogData} />
             </div>
             <div css={styles.inner}>
                 <YoutubePlayer id={id} onUpdate={onUpdate} />
