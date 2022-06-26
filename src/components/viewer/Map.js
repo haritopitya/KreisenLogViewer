@@ -16,7 +16,6 @@ const Map = ({ log, currentData }) => {
         zoom: 17,
         bearing: 0
     })
-    console.log(currentData);
     const currentPosition = getAircraftLatLng(currentData)
     const onMove = ({ viewState, type }) => {
         setView(viewState)
