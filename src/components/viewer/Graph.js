@@ -21,7 +21,7 @@ const Graph = ({ log, currentData }) => {
         {
             name: '高度',
             data: log.map(data => {
-                if (data['altimeterData/altitude'].value === '---') return [data.timestamp.rawValue + 9 * 60 * 60 * 1000, null]
+                if ((data['altimeterData/altitude'].value === '---') || (parseFloat(data['altimeterData/altitude'].value) > 7.3)) return [data.timestamp.rawValue + 9 * 60 * 60 * 1000, null]
                 return [data.timestamp.rawValue + 9 * 60 * 60 * 1000, data['altimeterData/altitude'].value]
             })
         },
@@ -103,8 +103,8 @@ const Graph = ({ log, currentData }) => {
         annotations: {
             points: [
                 {
-                    x: currentData && currentData['timestamp'].rawValue+9*60*60*1000,
-                    yAxisIndex:3,
+                    x: currentData && currentData['timestamp'].rawValue + 9 * 60 * 60 * 1000,
+                    yAxisIndex: 3,
                     seriesIndex: 3,
                     marker: {
                         sizez: 8
